@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carousel Bootstrap</title>
+    <link rel="stylesheet" href="./lib/bootstrap.min.css">
+</head>
+<body>
+    <div  id="text" class="container carousel slide carousel-fade" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div data-bs-interval="2000" class=" carousel-item active" >
+                <img class="d-block w-100" src="https://img.freepik.com/free-photo/medium-shot-family-taking-selfie_23-2149071631.jpg?w=996&t=st=1705417081~exp=1705417681~hmac=d8d9d032a2071c5b9f23889024384c3d2c6daee7692388dde2d1f197d4769af2" alt="">
+                <div>
+                    <h2>text</h2>
+                </div>
+            </div>
+            <div data-bs-interval="2000" class="carousel-item">
+                <img class="d-block w-100" src="https://img.freepik.com/premium-photo/showroom-cars-floor-automobile-company_674594-12071.jpg?w=1060" alt="">
+                <span>text</span>
+            </div>
+            <div data-bs-interval="2000" class="carousel-item">
+                <img class="d-block w-100" src="https://img.freepik.com/premium-photo/timeless-elegance-cinematic-view-stately-country-mansion_1117451-1711.jpg?w=1380" alt="">
+                <div>text</div>
+            </div>
+        </div>
+        <!-- botão ir e voltar -->
+        <button data-bs-target="#text" data-bs-slide="prev" class="carousel-control-prev" type="button">
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button data-bs-target="#text" data-bs-slide="next" class="carousel-control-next" type="button">
+            <span class="carousel-control-next-icon"></span>
+        </button>
+        <!-- indecador slide -->
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#text"  data-bs-slide-to="0" class="active">
+            <button type="button" data-bs-target="#text"  data-bs-slide-to="1">
+            <button type="button" data-bs-target="#text"  data-bs-slide-to="2">
+
+            </button>
+        </div>
+    </div>
+    <script src="./lib/bootstrap.bundle.min.js"></script>
+</body>
+</html>

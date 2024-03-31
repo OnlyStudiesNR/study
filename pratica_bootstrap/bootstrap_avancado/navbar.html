@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar</title>
+    <link rel="stylesheet" href="./lib/bootstrap.min.css">
+    <style>
+        .navbar-nav .nav-link.active  {
+            color: #fff;
+        }
+        .nav-link {
+            text-align: center;
+        }
+        header{
+            position: sticky;
+            top: 0;
+            left: 0;
+            background-color: #fff;
+        }
+        section {
+            height: 100vh;
+            background-color: rgb(210, 210, 239);
+            padding-top: 70px;
+        }
+        #product {
+            background-color: #f7f7f720;
+        }
+    </style>
+</head>
+<body>
+    <header id="header">
+        <div class="navbar navbar-expand-lg">
+            <div class="container">
+                <h1>Title</h1>
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <nav class="collapse navbar-collapse justify-content-end" id="menu">
+                    <ul class="nav navbar-nav nav-pills">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#home">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#product">Product</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#promotions">Promotions</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contact">contact</a>
+                        </li>
+                    </ul>
+                </nav>
+                <button type="button" class="btn btn-warning" id="read-message">Read message</button>
+            </div>
+        </div>
+    </header>
+    <main data-bs-spy="scroll" data-bs-target="#header">
+        <section id="home">
+            <h2>home</h2>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam, nihil, similique ut dolorum sequi cumque fuga ipsam cupiditate illum maiores dolor officiis ad. Blanditiis cum, et amet neque repudiandae incidunt!
+
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam, nihil, similique ut dolorum sequi cumque fuga ipsam cupiditate illum maiores dolor officiis ad. Blanditiis cum, et amet neque repudiandae incidunt!
+
+            </p>
+        </section>
+        <section id="product">
+            <h2>Product</h2>
+            <div class="container">
+                <nav class="nav nav-tabs">
+                    <button data-bs-toggle="tab" data-bs-target="#aba1" class="nav-link active" type="button" class="nav-link active">Car</button>
+                    <button data-bs-toggle="tab" data-bs-target="#aba2" class="nav-link" type="button" class="nav-link active">House</button>
+                    <button data-bs-toggle="tab" data-bs-target="#aba3" class="nav-link" type="button" class="nav-link active">atcion</button>
+                </nav>
+                <div class="tab-content">
+                    <div class="tab-pane active" id="aba1">
+                        <strong>Porsche</strong>
+                        <strong>Ram</strong>
+                        <strong>Tesla</strong>
+                    </div>
+                    <div class="tab-pane active" id="aba2">
+                        <strong>Beach Home</strong>
+                        <strong>Chale</strong>
+                        <strong>Risorte</strong>
+                    </div>
+                    <div class="tab-pane" id="aba3">
+                        <strong>Taesa</strong>
+                        <strong>Banco do Brasil</strong>
+                        <strong>Tesla</strong>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="promotions">
+            <h2>On-Sales</h2>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam, nihil, similique ut dolorum sequi cumque fuga ipsam cupiditate illum maiores dolor officiis ad. Blanditiis cum, et amet neque repudiandae incidunt!
+
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam, nihil, similique ut dolorum sequi cumque fuga ipsam cupiditate illum maiores dolor officiis ad. Blanditiis cum, et amet neque repudiandae incidunt!
+
+            </p>
+        </section>
+        <section id="contact">
+            <h2>contact</h2>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam, nihil, similique ut dolorum sequi cumque fuga ipsam cupiditate illum maiores dolor officiis ad. Blanditiis cum, et amet neque repudiandae incidunt!
+
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam, nihil, similique ut dolorum sequi cumque fuga ipsam cupiditate illum maiores dolor officiis ad. Blanditiis cum, et amet neque repudiandae incidunt!
+
+            </p>
+        </section>
+    </main>
+    <!-- Creat alert -->
+    <div class="toast-container position-fixed bottom-0 end-0 p-3">
+        <div class="toast" id="alert">
+            <div class="toast-header">
+                <strong>Imponent!</strong>
+            </div>
+            <div class="toast-body">
+                You have 10 message
+                <div class="mt-2 pt-2 border-top">
+                    <button data-bs-dismiss="toast" type="button" class="btn btn-danger">
+                        Close
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./lib/bootstrap.bundle.min.js"></script>
+    <script>
+        const ativarToast = document.getElementById('read-message') 
+        const messageToast = document.getElementById('alert')
+
+        if (ativarToast) {
+            ativarToast.addEventListener('click', () => {
+                const toast = new bootstrap.Toast(messageToast)
+                toast.show()
+            })
+        }
+    </script>
+</body>
+</html>

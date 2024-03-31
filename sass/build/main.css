@@ -1,0 +1,16 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+.products {
+  background-color: gold;
+}
+
+body {
+  background-color: #eee;
+}
+
+/*# sourceMappingURL=main.css.map */
